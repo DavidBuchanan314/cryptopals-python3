@@ -1,7 +1,8 @@
 from glob import glob
 from os import system
+import sys
 
-PYTHON = "pypy3" # pypy runs the tests faster
+PYTHON = sys.executable
 
 total = 64
 passed = 0
