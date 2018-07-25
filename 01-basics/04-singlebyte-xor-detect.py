@@ -10,7 +10,7 @@ if __name__ == "__main__":
 		for ct in ciphertexts
 	])
 	
-	_, best_plaintext = min((englishness(pt), pt) for pt in plaintexts)
+	best_plaintext = min(plaintexts, key=englishness) # I like this code
 	
 	message = best_plaintext.decode()
 	assert(message == "Now that the party is jumping\n")
