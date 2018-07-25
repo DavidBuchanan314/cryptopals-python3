@@ -59,3 +59,15 @@ def freqs(data):
 
 
 englishness = compose(freqscore, freqs)
+
+
+# https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
+def hamming(a, b):
+	assert(len(a) == len(b))
+	dist = 0
+	for a, b in zip(a, b):
+		x = a^b
+		while x:
+			x &= x-1
+			dist += 1
+	return dist
