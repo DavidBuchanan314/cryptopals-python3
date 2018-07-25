@@ -1,4 +1,5 @@
 from functools import *
+import operator as op
 
 
 # https://mathieularose.com/function-composition-in-python/
